@@ -25,9 +25,17 @@ namespace homework_manager
 			_addButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/add.png", UriKind.Relative));
 			_addButton.Text = "add task";
 			ApplicationBar.Buttons.Add(_addButton);
+			_addButton.Click += _addButton_Click;
 			//ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("rate & review");
 			//ApplicationBar.MenuItems.Add(appBarMenuItem);
 
+		}
+
+		int assignmentItemNumberTEMP = 0;
+		void _addButton_Click(object sender, EventArgs e)
+		{
+			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item " + assignmentItemNumberTEMP));
+			assignmentItemNumberTEMP++;
 		}
 	}
 }
