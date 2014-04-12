@@ -58,6 +58,8 @@ namespace homework_manager
 				PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 			}
 
+			// Initialize AssignmentItems
+			AssignmentItems = new ObservableCollection<AssignmentItem>();
 		}
 
 		// Code to execute when the application is launching (eg, from Start)

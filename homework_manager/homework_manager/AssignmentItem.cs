@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace homework_manager
 {
-	class AssignmentItem
+	public class AssignmentItem
 	{
 		public string Title { get; set; }
 		public bool Checked { get; set; }
