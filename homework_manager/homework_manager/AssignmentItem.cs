@@ -8,6 +8,18 @@ namespace homework_manager
 {
 	class AssignmentItem
 	{
+		public string Title { get; set; }
+		public bool Checked { get; set; }
 
+		public AssignmentItem()
+		{
+			Title = "";
+			Checked = false;
+		}
+		public AssignmentItem(string title)
+		{
+			Title = title;
+			Checked = false;
+		}
 	}
 }
