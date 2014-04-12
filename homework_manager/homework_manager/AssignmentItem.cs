@@ -11,6 +11,7 @@ namespace homework_manager
 		public string Title { get; set; }
 		public bool Checked { get; set; }
 
+		// Constructors:
 		public AssignmentItem()
 		{
 			Title = "";
@@ -20,6 +21,12 @@ namespace homework_manager
 		{
 			Title = title;
 			Checked = false;
+		}
+		// Copy constructor
+		public AssignmentItem(AssignmentItem other)
+		{
+			Title = other.Title;
+			Checked = other.Checked;
 		}
 	}
 }
