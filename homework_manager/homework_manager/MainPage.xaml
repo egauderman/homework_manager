@@ -33,35 +33,36 @@
                 <!-- The folowing StackPanel is here to enable stacking stuff above and below the ItemsControl -->
                 <StackPanel Orientation="Vertical">
                     
-                    <!-- The data context for the following ListBox is set to CompareItems in code behind. -->
-                    <!--<ItemsControl x:Name="CompareItemsItemsControl" ItemsSource="{Binding}" Margin="12,10,12,-10">
+                    <!-- The data context for the following ListBox is set to AssignmentItems in code behind. -->
+                    <ItemsControl x:Name="AssignmentItemsItemsControl" ItemsSource="{Binding}" Margin="12,10,12,-10">
                         <ItemsControl.ItemTemplate>
-                            <DataTemplate>-->
+                            <DataTemplate>
                                 
                                 <!-- EACH ASSIGNMENT ITEM: -->
-                    <Grid Margin="12,12,12,0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
+                                <Grid Margin="12,12,12,0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
                         
-                        <CheckBox x:Name="ItemCheckBox"
-                                  Grid.Column="0"
-                                  Margin="0,0,0,0"
-                                  />
-                        <TextBlock x:Name="ItemTitle"
-                                   Grid.Column="1"
-                                   Text="Hello"
-                                   FontSize="48"
-                                   />
-                    </Grid>
+                                    <CheckBox x:Name="ItemCheckBox"
+                                              Grid.Column="0"
+                                              Margin="0,0,0,0"
+                                              Checked="{Binding Checked}"
+                                              />
+                                    <TextBlock x:Name="ItemTitle"
+                                               Grid.Column="1"
+                                               FontSize="48"
+                                               Text="{Binding Title}"
+                                               />
+                                </Grid>
                                 
-                            <!--</DataTemplate>
+                            </DataTemplate>
                         </ItemsControl.ItemTemplate>
-                    </ItemsControl>-->
+                    </ItemsControl>
                     
                 </StackPanel>
             </ScrollViewer>

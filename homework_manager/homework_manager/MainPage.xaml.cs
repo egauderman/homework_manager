@@ -20,6 +20,9 @@ namespace homework_manager
 		{
 			InitializeComponent();
 
+			// Set the data context for the UI list of items
+			AssignmentItemsItemsControl.DataContext = (App.Current as App).AssignmentItems;
+
 			ApplicationBar = new ApplicationBar();
 
 			_addButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/add.png", UriKind.Relative));
@@ -36,6 +39,11 @@ namespace homework_manager
 		{
 			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item " + assignmentItemNumberTEMP));
 			assignmentItemNumberTEMP++;
+		}
+
+		private void ItemCheckBox_Checked(object sender, RoutedEventArgs e)
+		{
+
 		}
 	}
 }
