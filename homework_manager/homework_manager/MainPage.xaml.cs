@@ -13,29 +13,21 @@ namespace homework_manager
 {
 	public partial class MainPage : PhoneApplicationPage
 	{
+		private ApplicationBarIconButton _addButton;
+
 		// Constructor
 		public MainPage()
 		{
 			InitializeComponent();
 
-			// Sample code to localize the ApplicationBar
-			//BuildLocalizedApplicationBar();
+			ApplicationBar = new ApplicationBar();
+
+			_addButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/add.png", UriKind.Relative));
+			_addButton.Text = "add task";
+			ApplicationBar.Buttons.Add(_addButton);
+			//ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("rate & review");
+			//ApplicationBar.MenuItems.Add(appBarMenuItem);
+
 		}
-
-		// Sample code for building a localized ApplicationBar
-		//private void BuildLocalizedApplicationBar()
-		//{
-		//    // Set the page's ApplicationBar to a new instance of ApplicationBar.
-		//    ApplicationBar = new ApplicationBar();
-
-		//    // Create a new button and set the text value to the localized string from AppResources.
-		//    ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/AppBar/appbar.add.rest.png", UriKind.Relative));
-		//    appBarButton.Text = AppResources.AppBarButtonText;
-		//    ApplicationBar.Buttons.Add(appBarButton);
-
-		//    // Create a new menu item with the localized string from AppResources.
-		//    ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem(AppResources.AppBarMenuItemText);
-		//    ApplicationBar.MenuItems.Add(appBarMenuItem);
-		//}
 	}
 }
