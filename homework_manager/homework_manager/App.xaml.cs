@@ -7,7 +7,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using homework_manager.Resources;
-using System.Collections.ObjectModel;
+using System.Collections.ObjectModel; // for ObservableCollection<T>
 
 namespace homework_manager
 {
