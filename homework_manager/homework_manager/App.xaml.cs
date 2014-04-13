@@ -19,8 +19,14 @@ namespace homework_manager
 		/// <returns>The root frame of the Phone Application.</returns>
 		public static PhoneApplicationFrame RootFrame { get; private set; }
 
-		// The whole app's list of items
+
+
+		// The whole app's lists of items
 		public ObservableCollection<AssignmentItem> AssignmentItems = new ObservableCollection<AssignmentItem>();
+		public ObservableCollection<AssignmentItem> CompletedAssignmentItems = new ObservableCollection<AssignmentItem>();
+		public ObservableCollection<AssignmentItem> TrashAssignmentItems = new ObservableCollection<AssignmentItem>();
+
+
 
 		/// <summary>
 		/// Constructor for the Application object.

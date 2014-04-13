@@ -36,6 +36,10 @@ namespace homework_manager
 		void _addButton_Click(object sender, EventArgs e)
 		{
 			(App.Current as App).AssignmentItems.Add(new AssignmentItem());
+
+			// Big-time hack to scroll to the bottom:
+			AssignmentItemsScrollViewer.UpdateLayout(); // (required)
+			AssignmentItemsScrollViewer.ScrollToVerticalOffset(double.MaxValue);
 		}
 	}
 }

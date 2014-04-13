@@ -48,18 +48,18 @@
                                           IsChecked="{Binding Checked}"
                                           RenderTransformOrigin="0.5,0.5"
                                           VerticalAlignment="Center"
+                                          Margin="0,-12,-12,-12"
                                           >
                                     <CheckBox.RenderTransform>
-                                        <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                                        <CompositeTransform ScaleX="1.2" ScaleY="1.2"/>
                                     </CheckBox.RenderTransform>
                                 </CheckBox>
                     
                                 <TextBox x:Name="ItemTitle"
-                                           Grid.Column="1"
-                                           FontSize="48"
-                                           Text="{Binding Title}"
-                                           VerticalAlignment="Center"
-                                           />
+                                         Grid.Column="1"
+                                         Text="{Binding Title}"
+                                         VerticalAlignment="Center"
+                                         />
                             </Grid>
 
                         </DataTemplate>
