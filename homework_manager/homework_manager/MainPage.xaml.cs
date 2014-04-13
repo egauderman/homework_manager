@@ -30,7 +30,7 @@ namespace homework_manager
 
 		void _addButton_Click(object sender, EventArgs e)
 		{
-			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item "));
+			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item X"));
 		}
 	}
 }
