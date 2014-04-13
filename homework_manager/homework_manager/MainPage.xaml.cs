@@ -35,6 +35,8 @@ namespace homework_manager
 				_removeCompletedButton.Text = "complete";
 				ApplicationBar.Buttons.Add(_removeCompletedButton);
 				_removeCompletedButton.Click += _removeCompletedButton_Click;
+
+				//add menu item for going to completed tasks page
 			}
 			#endregion
 		}
@@ -53,7 +55,7 @@ namespace homework_manager
 		#region App Bar click handlers
 		void _addButton_Click(object sender, EventArgs e)
 		{
-			NavigationService.Navigate(new Uri("/CreateItem.xaml", UriKind.Relative));
+			NavigationService.Navigate(new Uri("/NewTaskPage.xaml", UriKind.Relative));
 
 			//// Big-time hack to scroll to the bottom:
 			//AssignmentItemsScrollViewer.UpdateLayout(); // (required)

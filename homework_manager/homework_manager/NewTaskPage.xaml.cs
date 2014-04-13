@@ -23,6 +23,8 @@ namespace homework_manager
 		{
 			(App.Current as App).AssignmentItems.Add(new AssignmentItem(NewTitleBox.Text));
 
+			(App.Current as App).NewAssignmentItems = true;
+
 			NavigationService.GoBack();
 		}
 		private void CancelButton_Click(object sender, EventArgs e)
