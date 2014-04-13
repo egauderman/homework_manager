@@ -22,18 +22,18 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="HOMEWORK SHARE" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="TASK SHARE" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock Text="assignments" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <ScrollViewer>
+            <ScrollViewer x:Name="AssignmentItemsScrollViewer">
                 <ItemsControl x:Name="AssignmentItemsItemsControl"
                               ItemsSource="{Binding}">
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
-                            
+
                             <Grid Margin="0,12,0,0">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -42,18 +42,26 @@
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto"/>
                                 </Grid.RowDefinitions>
-                                
+
                                 <CheckBox x:Name="ItemCheckBox"
                                           Grid.Column="0"
                                           IsChecked="{Binding Checked}"
-                                          />
-                                <TextBlock x:Name="ItemTitle"
+                                          RenderTransformOrigin="0.5,0.5"
+                                          VerticalAlignment="Center"
+                                          >
+                                    <CheckBox.RenderTransform>
+                                        <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                                    </CheckBox.RenderTransform>
+                                </CheckBox>
+                    
+                                <TextBox x:Name="ItemTitle"
                                            Grid.Column="1"
                                            FontSize="48"
                                            Text="{Binding Title}"
+                                           VerticalAlignment="Center"
                                            />
                             </Grid>
-                            
+
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

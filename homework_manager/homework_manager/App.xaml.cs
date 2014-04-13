@@ -19,7 +19,8 @@ namespace homework_manager
 		/// <returns>The root frame of the Phone Application.</returns>
 		public static PhoneApplicationFrame RootFrame { get; private set; }
 
-		public ObservableCollection<AssignmentItem> AssignmentItems { get; private set; }
+		// The whole app's list of items
+		public ObservableCollection<AssignmentItem> AssignmentItems = new ObservableCollection<AssignmentItem>();
 
 		/// <summary>
 		/// Constructor for the Application object.
@@ -57,9 +58,6 @@ namespace homework_manager
 				// and consume battery power when the user is not using the phone.
 				PhoneApplicationService.Current.UserIdleDetectionMode = IdleDetectionMode.Disabled;
 			}
-
-			// Initialize AssignmentItems
-			AssignmentItems = new ObservableCollection<AssignmentItem>();
 		}
 
 		// Code to execute when the application is launching (eg, from Start)
