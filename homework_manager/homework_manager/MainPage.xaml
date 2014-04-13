@@ -45,7 +45,7 @@
 
                                 <CheckBox x:Name="ItemCheckBox"
                                           Grid.Column="0"
-                                          IsChecked="{Binding Checked}"
+                                          IsChecked="{Binding Checked, Mode=TwoWay}"
                                           RenderTransformOrigin="0.5,0.5"
                                           VerticalAlignment="Center"
                                           Margin="0,-12,-12,-12"
@@ -57,7 +57,7 @@
                     
                                 <TextBox x:Name="ItemTitle"
                                          Grid.Column="1"
-                                         Text="{Binding Title}"
+                                         Text="{Binding Title, Mode=TwoWay}"
                                          VerticalAlignment="Center"
                                          />
                             </Grid>

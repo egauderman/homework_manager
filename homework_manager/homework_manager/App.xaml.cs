@@ -24,7 +24,6 @@ namespace homework_manager
 		// The whole app's lists of items
 		public ObservableCollection<AssignmentItem> AssignmentItems = new ObservableCollection<AssignmentItem>();
 		public ObservableCollection<AssignmentItem> CompletedAssignmentItems = new ObservableCollection<AssignmentItem>();
-		public ObservableCollection<AssignmentItem> TrashAssignmentItems = new ObservableCollection<AssignmentItem>();
 
 
 
