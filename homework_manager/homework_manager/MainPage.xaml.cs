@@ -39,14 +39,25 @@ namespace homework_manager
 			#endregion
 		}
 
+		protected override void OnNavigatedTo(NavigationEventArgs e)
+		{
+ 			base.OnNavigatedTo(e);
+
+			if ((App.Current as App).NewAssignmentItems)
+			{
+				AssignmentItemsScrollViewer.UpdateLayout(); // (required)
+				AssignmentItemsScrollViewer.ScrollToVerticalOffset(double.MaxValue);
+			}
+		}
+
 		#region App Bar click handlers
 		void _addButton_Click(object sender, EventArgs e)
 		{
-			(App.Current as App).AssignmentItems.Add(new AssignmentItem());
+			NavigationService.Navigate(new Uri("/CreateItem.xaml", UriKind.Relative));
 
-			// Big-time hack to scroll to the bottom:
-			AssignmentItemsScrollViewer.UpdateLayout(); // (required)
-			AssignmentItemsScrollViewer.ScrollToVerticalOffset(double.MaxValue);
+			//// Big-time hack to scroll to the bottom:
+			//AssignmentItemsScrollViewer.UpdateLayout(); // (required)
+			//AssignmentItemsScrollViewer.ScrollToVerticalOffset(double.MaxValue);
 		}
 
 		void _removeCompletedButton_Click(object sender, EventArgs e)

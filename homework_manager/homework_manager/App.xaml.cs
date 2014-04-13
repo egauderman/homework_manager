@@ -8,6 +8,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using homework_manager.Resources;
 using System.Collections.ObjectModel; // for ObservableCollection<T>
+using System.Collections.Generic;
 
 namespace homework_manager
 {
@@ -24,6 +25,9 @@ namespace homework_manager
 		// The whole app's lists of items
 		public ObservableCollection<AssignmentItem> AssignmentItems = new ObservableCollection<AssignmentItem>();
 		public ObservableCollection<AssignmentItem> CompletedAssignmentItems = new ObservableCollection<AssignmentItem>();
+
+		// True if there are newly added tasks when navigating to MainPage
+		public bool NewAssignmentItems { get; set; }
 
 
 
