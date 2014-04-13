@@ -6,11 +6,11 @@
     xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
@@ -21,51 +21,14 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="HOMEWORKSHARE" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="assignments" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="MY APPLICATION" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <!-- Not setting margin for this because there is a margin on CompareItemsItemsControl but not AdBar. -->
-            <ScrollViewer x:Name="CompareItemsScrollViewer">
-                <!-- The folowing StackPanel is here to enable stacking stuff above and below the ItemsControl -->
-                <StackPanel Orientation="Vertical">
-                    
-                    <!-- The data context for the following ListBox is set to AssignmentItems in code behind. -->
-                    <ItemsControl x:Name="AssignmentItemsItemsControl" ItemsSource="{Binding}" Margin="12,10,12,-10">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                
-                                <!-- EACH ASSIGNMENT ITEM: -->
-                                <Grid Margin="12,12,12,0">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-                        
-                                    <CheckBox x:Name="ItemCheckBox"
-                                              Grid.Column="0"
-                                              Margin="0,0,0,0"
-                                              Checked="{Binding Checked}"
-                                              />
-                                    <TextBlock x:Name="ItemTitle"
-                                               Grid.Column="1"
-                                               FontSize="48"
-                                               Text="{Binding Title}"
-                                               />
-                                </Grid>
-                                
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    
-                </StackPanel>
-            </ScrollViewer>
+
         </Grid>
     </Grid>
 

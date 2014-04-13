@@ -7,7 +7,6 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using homework_manager.Resources;
 
 namespace homework_manager
 {
@@ -15,13 +14,10 @@ namespace homework_manager
 	{
 		private ApplicationBarIconButton _addButton;
 
-		// Constructor
 		public MainPage()
 		{
 			InitializeComponent();
 
-			// Set the data context for the UI list of items
-			AssignmentItemsItemsControl.DataContext = (App.Current as App).AssignmentItems;
 
 			ApplicationBar = new ApplicationBar();
 
@@ -29,21 +25,12 @@ namespace homework_manager
 			_addButton.Text = "add task";
 			ApplicationBar.Buttons.Add(_addButton);
 			_addButton.Click += _addButton_Click;
-			//ApplicationBarMenuItem appBarMenuItem = new ApplicationBarMenuItem("rate & review");
-			//ApplicationBar.MenuItems.Add(appBarMenuItem);
 
 		}
 
-		int assignmentItemNumberTEMP = 0;
 		void _addButton_Click(object sender, EventArgs e)
 		{
-			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item " + assignmentItemNumberTEMP));
-			assignmentItemNumberTEMP++;
-		}
-
-		private void ItemCheckBox_Checked(object sender, RoutedEventArgs e)
-		{
-
+			(App.Current as App).AssignmentItems.Add(new AssignmentItem("Item "));
 		}
 	}
 }
