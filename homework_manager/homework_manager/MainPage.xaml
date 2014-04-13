@@ -30,7 +30,8 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <ScrollViewer x:Name="AssignmentItemsScrollViewer">
                 <ItemsControl x:Name="AssignmentItemsItemsControl"
-                              ItemsSource="{Binding}">
+                              ItemsSource="{Binding}"
+                              >
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
 
